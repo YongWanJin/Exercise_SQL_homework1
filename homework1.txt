@@ -1,0 +1,58 @@
+-- [ 함수 연습문제 3 ]
+
+-- # 1번
+
+-- * 풀이
+
+SELECT SYSDATE, 'DD-MON-YY'
+FROM DUAL;
+
+-- * 해설 :
+-- TO-CHAR() 형식으로 쓰지 말것.
+-- 포멧 위치는 바꿀 수 있다.
+
+
+-- # 2번
+
+-- * 풀이
+
+SELECT
+employee_id,
+last_name,
+salary,
+salary*1.155 "newSalary"
+
+FROM  employees
+;
+
+
+-- # 3번
+
+-- * 풀이
+
+SELECT
+employee_id,
+last_name,
+salary,
+salary*1.155 "NewSalary",
+salary*1.155-salary "Increase"
+
+FROM  employees
+;
+
+
+-- # 4번
+
+-- * 풀이
+SELECT
+last_name "Name",
+length(last_name) "Length"
+
+FROM  employees
+WHERE last_name LIKE 'J%' OR 'A%' OR 'M%'
+;
+
+풀다말았음.
+
+
+
